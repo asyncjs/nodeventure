@@ -16,7 +16,7 @@ function nomekop (
 		basic_attack: _basic_attack,
 		basic_attack_hp: _basic_attack_hp,
 		special_attack: _special_attack,
-		special_attack_type: _special_attack_type, // critical = attack*2, heal = +hp basic, stun = stun lock for next hit, block next = for basic hp, 
+		special_attack_type: _special_attack_type, // critical = attack*2, heal = +hp basic, stun = stun lock for next hit, block = for basic hp, 
 		special_attack_chance: _special_attack_chance,
 		graphic: _graphic
 	});	
@@ -55,7 +55,7 @@ function listFighters() {
 // Potential ideas:
 // - Special attacks be a heal
 // - Keep track 
-addCreature(nomekop("Misunderstood Spider", "What's the book for?", "Teeth", "Bited in the face", 0, "Hurls flies", 0.0, ""));
+addCreature(nomekop("Misunderstood Spider", "What's the book for?", "Teeth", "Bited in the face", 0, "Hurls flies", "critical", 0.0, ""));
 
 handler('tick', function () {
 	if( !hasTeleportedCreatures ) {
